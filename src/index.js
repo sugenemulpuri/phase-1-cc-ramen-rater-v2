@@ -45,6 +45,16 @@ function main() {
   addSubmitListener();
 }
 
+function postJSON(url, data) {
+  return fetch(`${url}`), {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(data),
+  }
+}
+
 main()
 
 // Export functions for testing
@@ -54,3 +64,5 @@ export {
   handleClick,
   main,
 };
+
+
